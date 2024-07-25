@@ -40,6 +40,18 @@ nav{
     min-height: 600px;
 }
 
+
+/*Styling for food carousel/slideshow on smaller screens  */
+@media(max-width: 600px){
+  .carousel .carousel-item {
+  height: 400px;
+}
+.carousel-item img {
+    min-height: 400px;
+}
+
+}
+
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
   cursor: pointer;
