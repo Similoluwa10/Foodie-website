@@ -4,14 +4,12 @@
   box-sizing: border-box;
 }
 
-/* body::before{
-  display: block;
-  content: '';
-  height: 100px;
-} */
-
 nav{
   font-size: 20px;
+}
+
+.nav-link{
+  color: white !important;
 }
 
 .navbar-brand{
@@ -40,7 +38,6 @@ nav{
     min-height: 600px;
 }
 
-
 /*Styling for food carousel/slideshow on smaller screens  */
 @media(max-width: 600px){
   .carousel .carousel-item {
@@ -49,7 +46,6 @@ nav{
 .carousel-item img {
     min-height: 400px;
 }
-
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -170,6 +166,30 @@ nav{
 
 .foodie{
   font-style: italic;
-  font-weight:bold;
-  color: #ff6600;
+  font-weight: bold;
+  color: #ff6600 !important;
+}
+
+/* Styling for the modal */
+.modal-sign-up-btn{
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: rgba(0, 0, 255, 0.906);
+  cursor: pointer;
+}
+
+#login-form{
+  display: one;
+}
+
+#sign-up-form{
+  max-width: 60%;
+  margin: auto;
+}
+
+
+/* Styles for the order login section */
+#approval-section{
+  display: none;
 }
