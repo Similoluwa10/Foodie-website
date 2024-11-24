@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" href="Images/foodie-logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/all-styles.css">
+
+    <!-- Online bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap dropdown link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Offline bootstrap link -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+
+    <script src="js/script.js"></script>
+
+    <!-- AOS library links -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <title>Foodie</title>
+</head>
+
+<body>
+
+    <!-- This is the load animation -->
+    <div id="loading">
+        <img class="fader" src="Images/foodie-logo.png" width="200px">
+    </div>
+
+
+    <div id="main-content">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-md navbar-dark px-5 theme-blue">
+            <div class="container px-lg-5">
+                <a href="#" class="navbar-brand">
+                    <img src="Images/foodie-logo.png" class="img-fluid" width="75px" alt="">
+                </a>
+                <!-- This button toggles the navbar on the smaller screen sizes -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- This is the navigation that collapses on smaller screen sizes -->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto align-items-center justify-content-between">
+                        <li class="navbar-item mx-2">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="navbar-item mx-2">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="navbar-item mx-2">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown text-center">
+                            <a class="nav-link dropdown-toggle" href="#" role="menu" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-primary fw-bold text-center" href="#top-dish">Top of
+                                        the
+                                        day</a></li>
+                                <li><a class="dropdown-item text-primary fw-bold text-center"
+                                        href="html pages/menu.html">More dishes</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item mx-2">
+                            <a type="button" class="btn nav-link" data-bs-toggle="modal"
+                                data-bs-target="#orderAlertModal">
+                                Order
+                            </a>
+                        </li>
+
+                        <!-- Login button on the navbar -->
+                        <li class="navbar-item mx-2" id="modal-trigger">
+                            <a class="btn text-white login-btn navbar-login-btn" data-bs-toggle="modal"
+                                data-bs-target="#myModal">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Food Slide show carousel -->
+        <section class="slide-show-section p-5">
+            <div class="container" style="max-width: 1000px;">
+                <h1 class="carousel-heading text-center mb-3 text-blue">Take a view of our amazing delicacies</h1>
+
+                <!-- Carousel -->
+                <div id="carouselExampleInterval" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="6"
+                            aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="7"
+                            aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="8"
+                            aria-label="Slide 9"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="9"
+                            aria-label="Slide 10"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1800">
+                            <img src="Images/food-image1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image3.jfif" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image4.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image5.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image6.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image7.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image8.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image9.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="1800">
+                            <img src="Images/food-image10.jfif" class="d-block w-100">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="about-section text-light py-5 px-xs-2 px-md-3 px-lg-5 d-flex align-items-center theme-blue" id="about"
+            style="min-height: 600px;">
+            <div class="container" style="max-width: 1100px;">
+                <div class="d-md-flex align-items-center justify-content-between">
+
+                    <div class="about-article text-center mx-4" >
+                        <p class="h2 mb-4">OUR HISTORY</p>
+                        <p class="mb-3">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati exercitationem
+                            tempore
+                            inventore aliquam consequatur qui quia minus dolor aspernatur? Impedit quia corporis
+                            assumenda
+                            excepturi veritatis ad cupiditate distinctio modi.
+                        </p>
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis explicabo
+                            blanditiis
+                            cumque
+                            molestias minima iste soluta sequi aut, aliquid consectetur provident doloribus est,
+                            corrupti
+                            beatae
+                            pariatur obcaecati possimus? Illum impedit, corporis iusto inventore perspiciatis corrupti
+                            facilis
+                            voluptate unde atque aut fuga neque at sint.
+                        </p>
+                        <a href="#" class="btn btn-primary back-top-button p-2 mb-5">Back to top</a>
+                    </div>
+
+                    <div class="about-image w-45 d-none d-sm-block d-xl-flex">
+                        <img src="Images/restuarant-image1.jpg" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top dishes section -->
+        <section class="food-display-section p-sm-1 p-lg-5" id="top-dish" >
+            <div class="container p-3">
+                <h2 class="top-dish-text mb-4 text-center">Top Dish Of The Day</h2>
+
+                <div class="card">
+                    <img src="Images/food-image13.jfif" height="600px" class="card-img-top" style="object-fit: cover;">
+
+                    <div class="card-body p-sm-3 p-lg-5">
+                        <h5 class="h2 card-title mt-3 mb-3"><span
+                                style="color:rgb(255, 136, 0); font-weight: bold;">Nigerian Ofada
+                                Rice </span></h5>
+                        <p class="card-text h5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repellendus
+                            soluta
+                            atque in molestiae enim harum accusantium iusto numquam nobis fugit dolore, ad amet placeat
+                            odit
+                            expedita aut maxime culpa nostrum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Tempore, blanditiis ea placeat voluptates repellat cupiditate atque. Esse impedit doloribus
+                            autem suscipit, explicabo commodi libero sit voluptatem reiciendis numquam maiores
+                            architecto
+                            debitis unde laborum porro temporibus dicta dolor ipsa optio beatae!
+                        </p>
+                        <a href="html pages/menu.html" class="btn btn-primary btn-lg theme-color">See more dishes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact-section p-5 bg-light text-blue" id="contact">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact Us</h2>
+
+                <div class="contact-container row g-4 d-flex align-items-center p-5 ">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="contact-info py-4">
+                            <h3 class="mb-4">Contact Information</h3>
+                            <p class="mb-3">Email: example@example.com</p>
+                            <p class="mb-3">Phone: 123-456-7890</p>
+                            <p class="mb-3">Address: 123 Street, City, Country</p>
+                            <p class="mb-3">Hours: Monday - Friday, 9am - 5pm</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-7">
+                        <div class="contact-form">
+                            <h3>Send us a Message</h3>
+
+                            <form method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn p-2 text-light msg-button">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="bg-dark text-center text-white p-5">
+            <div class="container">
+                <div class="socials mb-3">
+                    <a href="#">
+                        <i class="bi bi-twitter text-white mx-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-facebook text-white mx-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-linkedin text-white mx-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-instagram text-white mx-1"></i>
+                    </a>
+                </div>
+                <p class="lead">Copyright &copy 2024, Dev with Similoluwa.</p>
+            </div>
+        </footer>
+
+
+        <!-- Modals -->
+
+        <!-- Login form modal  -->
+        <section class="modal fade" id="myModal">
+            <div>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 id="modal-header-text" class="modal-title text-center">Login to <span
+                                    class="foodie">Foodie</span></h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form id="login-form" class="log-in-form">
+                                <div class="mb-3 mt-3">
+                                    <label for="email" class="form-label">Email:</label> <br>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                        name="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pwd" class="form-label">Password:</label><br>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                        name="pswd">
+                                </div>
+                                <div class="form-check mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-4">Submit</button>
+
+                                <div>
+                                    <p> Don't have an account?
+                                        <a class="modal-sign-up-btn" href="html pages/signup.html"
+                                            id="modal-sign-up">Sign
+                                            up</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-close-btn text-white"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- This modal alerts the user to login to order -->
+        <div class="modal fade" id="orderAlertModal" tabindex="-1" role="dialog" aria-labelledby="orderAlertModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <h4 class=""> You have to login to <span class="foodie">Foodie</span> to place an order</h4>
+                        <div>
+                            <p> Don't have an account?
+                                <a class="modal-sign-up-btn" href="html pages/signup.html" id="modal-sign-up">Sign
+                                    up</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn modal-close-btn text-white" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Offline bootstrap javascript -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</body>
+
+</html>

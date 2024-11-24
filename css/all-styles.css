@@ -1,0 +1,265 @@
+:root{
+  --theme-blue:  #1140cbeb;
+  --theme-orange: #f26202;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Theme colors for website */
+.theme-blue{
+  background-color: var(--theme-blue) !important;
+}
+.theme-orange{
+  background-color: var(--theme-orange) !important;
+}
+.text-blue{
+  color: var(--theme-blue);
+}
+
+
+/* Styling for the load animation */
+#loading{
+  height: 100vh;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fader{
+  color: var(--theme-orange);
+  font-style: italic;
+  font-weight: bold;
+  animation: fade 2s linear infinite;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/* Main content is hidden until animation loads */
+#main-content{
+  display: none;
+}
+
+
+/* Styling for the navigation bar */
+nav{
+  font-size: 20px;
+}
+.nav-link{
+  color: white !important;
+}
+.navbar-brand{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px !important;
+}
+.navbar-login-btn{
+  padding: 7px 7px;
+}
+
+/* Styles for carousel heading */
+.carousel-heading{
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+/* Styling for food carousel/slideshow  */
+.carousel .carousel-item {
+  height: 600px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: fit;
+    object-position: center;
+    top: 0;
+    left: 0;
+    min-height: 600px;
+}
+
+
+/*Styling for food carousel/slideshow on smaller screens  */
+@media(max-width: 600px){
+  .carousel .carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+    min-height: 400px;
+}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+.thumbnail-images{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+/* Styling for some buttons on hompage */
+.login-btn, .back-top-button, .modal-close-btn, .msg-button {
+  background-color: var(--theme-orange) !important;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.login-btn:hover, .back-top-button:hover, .modal-close-btn:hover {
+  background-color: #ff9900;
+}
+
+
+/* Styling for the food display section */
+.food-display-section .card{
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.top-dish-text{
+  font-size: 80px;
+  font-weight: bold;
+  font-style: italic;
+  color: #ff6600;
+}
+
+
+/* Styling for the contact section */
+#contact {
+  padding: 20px 50px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: "Poetsen One", sans-serif;
+}
+
+.contact-container{
+  margin-bottom: 100px;
+  border: solid .5px #007bfff2;
+  border-radius: 10px;
+  /* padding: 50px 60px; */
+}
+
+.contact-info {
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #007bff;
+}
+
+.contact-info h3{
+  margin-bottom:  20px;
+}
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+
+/* Styling for the contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form h3 {
+  margin-bottom: 20px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form button {
+  background-color: #ff6600;
+  border: none;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #ff9900;
+}
+
+.foodie{
+  font-style: italic;
+  font-weight: bold;
+  color: #ff6600 !important;
+}
+
+/* Styling for the menu section */
+.menu-section-container div{
+  margin: 20px 30px;
+}
+
+.menu-section-container div .card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px !important;
+}
+
+
+/* Styling for the modal */
+.modal-sign-up-btn{
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: rgba(0, 0, 255, 0.906);
+  cursor: pointer;
+}
+
+/* Styling for the signup form */
+.sign-up-form-card{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 10px;
+}
+
+.sign-up-form-card > * {
+  padding: 0 !important;
+}
+
+.sign-up-form-card img{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#sign-up-form{
+  max-width: 80%;
+  margin: auto;
+}
+
+
+/* Styles for the order login section */
+#approval-section{
+  display: none;
+}
